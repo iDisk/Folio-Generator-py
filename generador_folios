@@ -1,0 +1,18 @@
+import random
+
+def generar_folio():
+    letras = "ABCDEF"
+    caracteres = "0123456789ABCDEF"
+    folio = ""
+    for i in range(8):
+        if i == 4:
+            folio += "-"
+        if i < 4:
+            folio += random.choice(letras)
+        else:
+            folio += random.choice(caracteres)
+    return folio
+
+if __name__ == "__main__":
+    folio_generado = generar_folio()
+    print("Folio generado:", folio_generado)
